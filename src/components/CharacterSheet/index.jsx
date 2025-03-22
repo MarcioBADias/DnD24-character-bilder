@@ -22,104 +22,110 @@ const CharacterSheet = () => {
           <div style={{ display: 'flex', justifyContent: 'space-around' }}>
             <div>
               <StatBox>10</StatBox>
-              <p style={{ fontSize: 12 }}>Valor</p>
+              <span style={{ fontSize: 12 }}>Valor</span>
             </div>
             <div>
               <StatBox>+2</StatBox>
-              <p style={{ fontSize: 12 }}>Bonus</p>
+              <span style={{ fontSize: 12 }}>Bonus</span>
             </div>
           </div>
+          <span style={{ color: 'gold', fontSize: 10 }}>Saving Throws: +2</span>
         </div>
         <div>
           DEX
           <div style={{ display: 'flex', justifyContent: 'space-around' }}>
             <div>
               <StatBox>10</StatBox>
-              <p style={{ fontSize: 12 }}>Valor</p>
+              <span style={{ fontSize: 12 }}>Valor</span>
             </div>
             <div>
               <StatBox>+2</StatBox>
-              <p style={{ fontSize: 12 }}>Bonus</p>
+              <span style={{ fontSize: 12 }}>Bonus</span>
             </div>
           </div>
+          <span style={{ color: 'gold', fontSize: 10 }}>Saving Throws: +2</span>
         </div>
         <div>
           CON
           <div style={{ display: 'flex', justifyContent: 'space-around' }}>
             <div>
               <StatBox>10</StatBox>
-              <p style={{ fontSize: 12 }}>Valor</p>
+              <span style={{ fontSize: 12 }}>Valor</span>
             </div>
             <div>
               <StatBox>+2</StatBox>
-              <p style={{ fontSize: 12 }}>Bonus</p>
+              <span style={{ fontSize: 12 }}>Bonus</span>
             </div>
           </div>
+          <span style={{ color: 'gold', fontSize: 10 }}>Saving Throws: +2</span>
         </div>{' '}
         <div>
           INT
           <div style={{ display: 'flex', justifyContent: 'space-around' }}>
             <div>
               <StatBox>10</StatBox>
-              <p style={{ fontSize: 12 }}>Valor</p>
+              <span style={{ fontSize: 12 }}>Valor</span>
             </div>
             <div>
               <StatBox>+2</StatBox>
-              <p style={{ fontSize: 12 }}>Bonus</p>
+              <span style={{ fontSize: 12 }}>Bonus</span>
             </div>
           </div>
+          <span style={{ color: 'gold', fontSize: 10 }}>Saving Throws: +2</span>
         </div>{' '}
         <div>
           WIS
           <div style={{ display: 'flex', justifyContent: 'space-around' }}>
             <div>
               <StatBox>10</StatBox>
-              <p style={{ fontSize: 12 }}>Valor</p>
+              <span style={{ fontSize: 12 }}>Valor</span>
             </div>
             <div>
               <StatBox>+2</StatBox>
-              <p style={{ fontSize: 12 }}>Bonus</p>
+              <span style={{ fontSize: 12 }}>Bonus</span>
             </div>
           </div>
+          <span style={{ color: 'gold', fontSize: 10 }}>Saving Throws: +2</span>
         </div>{' '}
         <div>
           CHA
           <div style={{ display: 'flex', justifyContent: 'space-around' }}>
             <div>
               <StatBox>10</StatBox>
-              <p style={{ fontSize: 12 }}>Valor</p>
+              <span style={{ fontSize: 12 }}>Valor</span>
             </div>
             <div>
               <StatBox>+2</StatBox>
-              <p style={{ fontSize: 12 }}>Bonus</p>
+              <span style={{ fontSize: 12 }}>Bonus</span>
             </div>
           </div>
+          <span style={{ color: 'gold', fontSize: 10 }}>Saving Throws: +2</span>
         </div>
       </StatGrid>
       <SavingThrows>
-        <h3>Saving Throws</h3>
+        <h3>Skills</h3>
         <SavingThrow>
-          <span>Strength</span>
+          <span>AThletic</span>
           <span>+2</span>
         </SavingThrow>
         <SavingThrow>
-          <span>Dexterity</span>
+          <span>Deception</span>
           <span>+0</span>
         </SavingThrow>
         <SavingThrow>
-          <span>Constitution</span>
+          <span>Insight</span>
           <span>+2</span>
         </SavingThrow>
         <SavingThrow>
-          <span>Intelligence</span>
+          <span>Performace</span>
           <span>+1</span>
         </SavingThrow>
         <SavingThrow>
-          <span>Wisdom</span>
+          <span>Stealth</span>
           <span>+5</span>
         </SavingThrow>
         <SavingThrow>
-          <span>Charisma</span>
+          <span>Survivor</span>
           <span>+1</span>
         </SavingThrow>
       </SavingThrows>
