@@ -1,7 +1,9 @@
+import { CharacterSheet } from './components/CharacterSheet'
+
 const App = () => {
   return (
     <>
-      <h1>Boilerplace + React</h1>
+      <CharacterSheet />
     </>
   )
 }
