@@ -5,8 +5,9 @@ export const Container = styled.div`
   color: white;
   padding: 20px;
   font-family: Arial, sans-serif;
-  max-width: 400px;
+  width: 90vw;
   border-radius: 10px;
+  text-align: center;
 `
 
 export const Header = styled.div`
