@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useReducer, useState } from 'react'
 import { IoMdArrowDropdownCircle, IoMdArrowDropupCircle } from 'react-icons/io'
 import {
   GiSpellBook,
@@ -187,8 +187,19 @@ const skills = [
   },
 ]
 
+const reduce = (state, action) => {
+  return {
+    ...state,
+    openSection: state.openSection === action.section ? null : action.section,
+  }
+}
+
+const initialState = {
+  openSection: null,
+}
+
 const CharacterSheet = () => {
-  const [fieldIsOpen, setFieldIsOpen] = useState(false)
+  const [state, dispatch] = useReducer(reduce, initialState)
   return (
     <Container>
       <Header>
@@ -196,8 +207,8 @@ const CharacterSheet = () => {
         <StatBox>HP: 17/17</StatBox>
       </Header>
       <StatGrid>
-        {attributes.map((attr) => (
-          <div>
+        {attributes.map((attr, i) => (
+          <div key={i}>
             {attr.type}
             <AttrField>
               <div>
@@ -217,18 +228,18 @@ const CharacterSheet = () => {
       </StatGrid>
 
       <Skills>
-        <OpenFieldButton onClick={() => setFieldIsOpen(!fieldIsOpen)}>
+        <OpenFieldButton onClick={() => dispatch({ section: 'skills' })}>
           <GiBullseye />
           <h3>Skills</h3>
-          {fieldIsOpen ? (
+          {state.openSection === 'skills' ? (
             <IoMdArrowDropupCircle />
           ) : (
             <IoMdArrowDropdownCircle />
           )}
         </OpenFieldButton>
-        {fieldIsOpen &&
-          skills.map((skill) => (
-            <Skill>
+        {state.openSection === 'skills' &&
+          skills.map((skill, i) => (
+            <Skill key={i}>
               <span>{skill.name}</span>
               <span>+{skill.value}</span>
             </Skill>
@@ -236,10 +247,10 @@ const CharacterSheet = () => {
       </Skills>
 
       <Skills>
-        <OpenFieldButton>
+        <OpenFieldButton onClick={() => dispatch({ section: 'actions' })}>
           <GiZeusSword />
           <h3>Actions</h3>
-          {fieldIsOpen ? (
+          {state.openSection === 'actions' ? (
             <IoMdArrowDropupCircle />
           ) : (
             <IoMdArrowDropdownCircle />
@@ -248,10 +259,10 @@ const CharacterSheet = () => {
       </Skills>
 
       <Skills>
-        <OpenFieldButton>
+        <OpenFieldButton onClick={() => dispatch({ section: 'features' })}>
           <GiMightyForce />
           <h3>Features</h3>
-          {fieldIsOpen ? (
+          {state.openSection === 'features' ? (
             <IoMdArrowDropupCircle />
           ) : (
             <IoMdArrowDropdownCircle />
@@ -260,10 +271,10 @@ const CharacterSheet = () => {
       </Skills>
 
       <Skills>
-        <OpenFieldButton>
+        <OpenFieldButton onClick={() => dispatch({ section: 'spells' })}>
           <GiSpellBook />
           <h3>Spells</h3>
-          {fieldIsOpen ? (
+          {state.openSection === 'spells' ? (
             <IoMdArrowDropupCircle />
           ) : (
             <IoMdArrowDropdownCircle />
@@ -273,9 +284,21 @@ const CharacterSheet = () => {
 
       <Skills>
         <OpenFieldButton>
-          <GiPaperBagFolded />
+          <GiPaperBagFolded onClick={() => dispatch({ section: 'iventory' })} />
           <h3>Iventory</h3>
-          {fieldIsOpen ? (
+          {state.openSection === 'iventory' ? (
+            <IoMdArrowDropupCircle />
+          ) : (
+            <IoMdArrowDropdownCircle />
+          )}
+        </OpenFieldButton>
+      </Skills>
+
+      <Skills>
+        <OpenFieldButton onClick={() => dispatch({ section: 'background' })}>
+          <GiPaperBagFolded />
+          <h3>Background</h3>
+          {state.openSection === 'background' ? (
             <IoMdArrowDropupCircle />
           ) : (
             <IoMdArrowDropdownCircle />
