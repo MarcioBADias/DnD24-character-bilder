@@ -188,7 +188,7 @@ const skills = [
 ]
 
 const CharacterSheet = () => {
-  const [skillFieldIsOpen, setSkillFieldIsOpen] = useState(false)
+  const [fieldIsOpen, setFieldIsOpen] = useState(false)
   return (
     <Container>
       <Header>
@@ -217,16 +217,16 @@ const CharacterSheet = () => {
       </StatGrid>
 
       <Skills>
-        <OpenFieldButton onClick={() => setSkillFieldIsOpen(!skillFieldIsOpen)}>
+        <OpenFieldButton onClick={() => setFieldIsOpen(!fieldIsOpen)}>
           <GiBullseye />
           <h3>Skills</h3>
-          {skillFieldIsOpen ? (
+          {fieldIsOpen ? (
             <IoMdArrowDropupCircle />
           ) : (
             <IoMdArrowDropdownCircle />
           )}
         </OpenFieldButton>
-        {skillFieldIsOpen &&
+        {fieldIsOpen &&
           skills.map((skill) => (
             <Skill>
               <span>{skill.name}</span>
@@ -239,7 +239,7 @@ const CharacterSheet = () => {
         <OpenFieldButton>
           <GiZeusSword />
           <h3>Actions</h3>
-          {skillFieldIsOpen ? (
+          {fieldIsOpen ? (
             <IoMdArrowDropupCircle />
           ) : (
             <IoMdArrowDropdownCircle />
@@ -251,7 +251,7 @@ const CharacterSheet = () => {
         <OpenFieldButton>
           <GiMightyForce />
           <h3>Features</h3>
-          {skillFieldIsOpen ? (
+          {fieldIsOpen ? (
             <IoMdArrowDropupCircle />
           ) : (
             <IoMdArrowDropdownCircle />
@@ -263,7 +263,7 @@ const CharacterSheet = () => {
         <OpenFieldButton>
           <GiSpellBook />
           <h3>Spells</h3>
-          {skillFieldIsOpen ? (
+          {fieldIsOpen ? (
             <IoMdArrowDropupCircle />
           ) : (
             <IoMdArrowDropdownCircle />
@@ -275,7 +275,7 @@ const CharacterSheet = () => {
         <OpenFieldButton>
           <GiPaperBagFolded />
           <h3>Iventory</h3>
-          {skillFieldIsOpen ? (
+          {fieldIsOpen ? (
             <IoMdArrowDropupCircle />
           ) : (
             <IoMdArrowDropdownCircle />
