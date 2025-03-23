@@ -1,4 +1,12 @@
 import React, { useState } from 'react'
+import { IoMdArrowDropdownCircle, IoMdArrowDropupCircle } from 'react-icons/io'
+import {
+  GiSpellBook,
+  GiZeusSword,
+  GiMightyForce,
+  GiBullseye,
+  GiPaperBagFolded,
+} from 'react-icons/gi'
 import {
   AttrField,
   CharacterName,
@@ -210,7 +218,13 @@ const CharacterSheet = () => {
 
       <Skills>
         <OpenFieldButton onClick={() => setSkillFieldIsOpen(!skillFieldIsOpen)}>
+          <GiBullseye />
           <h3>Skills</h3>
+          {skillFieldIsOpen ? (
+            <IoMdArrowDropupCircle />
+          ) : (
+            <IoMdArrowDropdownCircle />
+          )}
         </OpenFieldButton>
         {skillFieldIsOpen &&
           skills.map((skill) => (
@@ -223,25 +237,49 @@ const CharacterSheet = () => {
 
       <Skills>
         <OpenFieldButton>
+          <GiZeusSword />
           <h3>Actions</h3>
+          {skillFieldIsOpen ? (
+            <IoMdArrowDropupCircle />
+          ) : (
+            <IoMdArrowDropdownCircle />
+          )}
         </OpenFieldButton>
       </Skills>
 
       <Skills>
         <OpenFieldButton>
+          <GiMightyForce />
           <h3>Features</h3>
+          {skillFieldIsOpen ? (
+            <IoMdArrowDropupCircle />
+          ) : (
+            <IoMdArrowDropdownCircle />
+          )}
         </OpenFieldButton>
       </Skills>
 
       <Skills>
         <OpenFieldButton>
+          <GiSpellBook />
           <h3>Spells</h3>
+          {skillFieldIsOpen ? (
+            <IoMdArrowDropupCircle />
+          ) : (
+            <IoMdArrowDropdownCircle />
+          )}
         </OpenFieldButton>
       </Skills>
 
       <Skills>
         <OpenFieldButton>
+          <GiPaperBagFolded />
           <h3>Iventory</h3>
+          {skillFieldIsOpen ? (
+            <IoMdArrowDropupCircle />
+          ) : (
+            <IoMdArrowDropdownCircle />
+          )}
         </OpenFieldButton>
       </Skills>
     </Container>

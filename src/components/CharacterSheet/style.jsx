@@ -46,10 +46,13 @@ export const Skills = styled.div`
 `
 
 export const OpenFieldButton = styled.div`
+  align-items: center;
   border: 2px gold solid;
   border-radius: 5px;
   cursor: pointer;
-  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
 `
 
 export const Skill = styled.div`
