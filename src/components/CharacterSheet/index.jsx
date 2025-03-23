@@ -3,11 +3,179 @@ import {
   CharacterName,
   Container,
   Header,
-  SavingThrow,
-  SavingThrows,
+  Skill,
+  Skills,
   StatBox,
   StatGrid,
 } from './style'
+
+const attributes = [
+  {
+    type: 'STR',
+    value: 10,
+    bonus: '+2',
+    saving: '+2',
+  },
+  {
+    type: 'DEX',
+    value: 10,
+    bonus: '+2',
+    saving: '+2',
+  },
+  {
+    type: 'CON',
+    value: 10,
+    bonus: '+2',
+    saving: '+2',
+  },
+  {
+    type: 'INT',
+    value: 10,
+    bonus: '+2',
+    saving: '+2',
+  },
+  {
+    type: 'WIS',
+    value: 10,
+    bonus: '+2',
+    saving: '+2',
+  },
+  {
+    type: 'CHA',
+    value: 10,
+    bonus: '+2',
+    saving: '+2',
+  },
+]
+
+const skills = [
+  {
+    name: 'acrobatics',
+    attr: 'DEX',
+    value: 0,
+    proeficiency: false,
+    expertise: false,
+  },
+  {
+    name: 'animal handling',
+    attr: 'WIS',
+    value: 0,
+    proeficiency: false,
+    expertise: false,
+  },
+  {
+    name: 'arcana',
+    attr: 'INT',
+    value: 0,
+    proeficiency: false,
+    expertise: false,
+  },
+  {
+    name: 'athletics',
+    attr: 'STR',
+    value: 0,
+    proeficiency: false,
+    expertise: false,
+  },
+  {
+    name: 'deception',
+    attr: 'CHA',
+    value: 0,
+    proeficiency: false,
+    expertise: false,
+  },
+  {
+    name: 'history',
+    attr: 'INT',
+    value: 0,
+    proeficiency: false,
+    expertise: false,
+  },
+  {
+    name: 'insight',
+    attr: 'WIS',
+    value: 0,
+    proeficiency: false,
+    expertise: false,
+  },
+  {
+    name: 'intimidation',
+    attr: 'CHA',
+    value: 0,
+    proeficiency: false,
+    expertise: false,
+  },
+  {
+    name: 'investigation',
+    attr: 'INT',
+    value: 0,
+    proeficiency: false,
+    expertise: false,
+  },
+  {
+    name: 'medicine',
+    attr: 'WIS',
+    value: 0,
+    proeficiency: false,
+    expertise: false,
+  },
+  {
+    name: 'nature',
+    attr: 'INT',
+    value: 0,
+    proeficiency: false,
+    expertise: false,
+  },
+  {
+    name: 'perception',
+    attr: 'WIS',
+    value: 0,
+    proeficiency: false,
+    expertise: false,
+  },
+  {
+    name: 'performance',
+    attr: 'CHA',
+    value: 0,
+    proeficiency: false,
+    expertise: false,
+  },
+  {
+    name: 'persuasion',
+    attr: 'CHA',
+    value: 0,
+    proeficiency: false,
+    expertise: false,
+  },
+  {
+    name: 'religion',
+    attr: 'INT',
+    value: 0,
+    proeficiency: false,
+    expertise: false,
+  },
+  {
+    name: 'sleight of hand',
+    attr: 'DEX',
+    value: 0,
+    proeficiency: false,
+    expertise: false,
+  },
+  {
+    name: 'stealth',
+    attr: 'DEX',
+    value: 0,
+    proeficiency: false,
+    expertise: false,
+  },
+  {
+    name: 'survival',
+    attr: 'WIS',
+    value: 0,
+    proeficiency: false,
+    expertise: false,
+  },
+]
 
 const CharacterSheet = () => {
   return (
@@ -17,118 +185,34 @@ const CharacterSheet = () => {
         <StatBox>HP: 17/17</StatBox>
       </Header>
       <StatGrid>
-        <div>
-          STR
-          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-            <div>
-              <StatBox>10</StatBox>
-              <span style={{ fontSize: 12 }}>Valor</span>
+        {attributes.map((attr) => (
+          <div>
+            {attr.type}
+            <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+              <div>
+                <StatBox>{attr.value}</StatBox>
+                <span style={{ fontSize: 12 }}>Valor</span>
+              </div>
+              <div>
+                <StatBox>{attr.bonus}</StatBox>
+                <span style={{ fontSize: 12 }}>Bonus</span>
+              </div>
             </div>
-            <div>
-              <StatBox>+2</StatBox>
-              <span style={{ fontSize: 12 }}>Bonus</span>
-            </div>
+            <span style={{ color: 'gold', fontSize: 10 }}>
+              Saving Throws: {attr.saving}
+            </span>
           </div>
-          <span style={{ color: 'gold', fontSize: 10 }}>Saving Throws: +2</span>
-        </div>
-        <div>
-          DEX
-          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-            <div>
-              <StatBox>10</StatBox>
-              <span style={{ fontSize: 12 }}>Valor</span>
-            </div>
-            <div>
-              <StatBox>+2</StatBox>
-              <span style={{ fontSize: 12 }}>Bonus</span>
-            </div>
-          </div>
-          <span style={{ color: 'gold', fontSize: 10 }}>Saving Throws: +2</span>
-        </div>
-        <div>
-          CON
-          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-            <div>
-              <StatBox>10</StatBox>
-              <span style={{ fontSize: 12 }}>Valor</span>
-            </div>
-            <div>
-              <StatBox>+2</StatBox>
-              <span style={{ fontSize: 12 }}>Bonus</span>
-            </div>
-          </div>
-          <span style={{ color: 'gold', fontSize: 10 }}>Saving Throws: +2</span>
-        </div>{' '}
-        <div>
-          INT
-          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-            <div>
-              <StatBox>10</StatBox>
-              <span style={{ fontSize: 12 }}>Valor</span>
-            </div>
-            <div>
-              <StatBox>+2</StatBox>
-              <span style={{ fontSize: 12 }}>Bonus</span>
-            </div>
-          </div>
-          <span style={{ color: 'gold', fontSize: 10 }}>Saving Throws: +2</span>
-        </div>{' '}
-        <div>
-          WIS
-          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-            <div>
-              <StatBox>10</StatBox>
-              <span style={{ fontSize: 12 }}>Valor</span>
-            </div>
-            <div>
-              <StatBox>+2</StatBox>
-              <span style={{ fontSize: 12 }}>Bonus</span>
-            </div>
-          </div>
-          <span style={{ color: 'gold', fontSize: 10 }}>Saving Throws: +2</span>
-        </div>{' '}
-        <div>
-          CHA
-          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-            <div>
-              <StatBox>10</StatBox>
-              <span style={{ fontSize: 12 }}>Valor</span>
-            </div>
-            <div>
-              <StatBox>+2</StatBox>
-              <span style={{ fontSize: 12 }}>Bonus</span>
-            </div>
-          </div>
-          <span style={{ color: 'gold', fontSize: 10 }}>Saving Throws: +2</span>
-        </div>
+        ))}
       </StatGrid>
-      <SavingThrows>
+      <Skills>
         <h3>Skills</h3>
-        <SavingThrow>
-          <span>AThletic</span>
-          <span>+2</span>
-        </SavingThrow>
-        <SavingThrow>
-          <span>Deception</span>
-          <span>+0</span>
-        </SavingThrow>
-        <SavingThrow>
-          <span>Insight</span>
-          <span>+2</span>
-        </SavingThrow>
-        <SavingThrow>
-          <span>Performace</span>
-          <span>+1</span>
-        </SavingThrow>
-        <SavingThrow>
-          <span>Stealth</span>
-          <span>+5</span>
-        </SavingThrow>
-        <SavingThrow>
-          <span>Survivor</span>
-          <span>+1</span>
-        </SavingThrow>
-      </SavingThrows>
+        {skills.map((skill) => (
+          <Skill>
+            <span>{skill.name}</span>
+            <span>+{skill.value}</span>
+          </Skill>
+        ))}
+      </Skills>
     </Container>
   )
 }

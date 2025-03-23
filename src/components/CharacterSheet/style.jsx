@@ -36,11 +36,11 @@ export const StatGrid = styled.div`
   margin-top: 15px;
 `
 
-export const SavingThrows = styled.div`
+export const Skills = styled.div`
   margin-top: 15px;
 `
 
-export const SavingThrow = styled.div`
+export const Skill = styled.div`
   background: #2a2e35;
   padding: 5px;
   border-radius: 5px;
