@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
+  AttrField,
   CharacterName,
   Container,
   Header,
+  OpenFieldButton,
   Skill,
   Skills,
   StatBox,
@@ -178,6 +180,7 @@ const skills = [
 ]
 
 const CharacterSheet = () => {
+  const [skillFieldIsOpen, setSkillFieldIsOpen] = useState(false)
   return (
     <Container>
       <Header>
@@ -188,7 +191,7 @@ const CharacterSheet = () => {
         {attributes.map((attr) => (
           <div>
             {attr.type}
-            <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+            <AttrField>
               <div>
                 <StatBox>{attr.value}</StatBox>
                 <span style={{ fontSize: 12 }}>Valor</span>
@@ -197,21 +200,49 @@ const CharacterSheet = () => {
                 <StatBox>{attr.bonus}</StatBox>
                 <span style={{ fontSize: 12 }}>Bonus</span>
               </div>
-            </div>
+            </AttrField>
             <span style={{ color: 'gold', fontSize: 10 }}>
               Saving Throws: {attr.saving}
             </span>
           </div>
         ))}
       </StatGrid>
+
       <Skills>
-        <h3>Skills</h3>
-        {skills.map((skill) => (
-          <Skill>
-            <span>{skill.name}</span>
-            <span>+{skill.value}</span>
-          </Skill>
-        ))}
+        <OpenFieldButton onClick={() => setSkillFieldIsOpen(!skillFieldIsOpen)}>
+          <h3>Skills</h3>
+        </OpenFieldButton>
+        {skillFieldIsOpen &&
+          skills.map((skill) => (
+            <Skill>
+              <span>{skill.name}</span>
+              <span>+{skill.value}</span>
+            </Skill>
+          ))}
+      </Skills>
+
+      <Skills>
+        <OpenFieldButton>
+          <h3>Actions</h3>
+        </OpenFieldButton>
+      </Skills>
+
+      <Skills>
+        <OpenFieldButton>
+          <h3>Features</h3>
+        </OpenFieldButton>
+      </Skills>
+
+      <Skills>
+        <OpenFieldButton>
+          <h3>Spells</h3>
+        </OpenFieldButton>
+      </Skills>
+
+      <Skills>
+        <OpenFieldButton>
+          <h3>Iventory</h3>
+        </OpenFieldButton>
       </Skills>
     </Container>
   )

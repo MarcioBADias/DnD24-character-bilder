@@ -36,8 +36,20 @@ export const StatGrid = styled.div`
   margin-top: 15px;
 `
 
+export const AttrField = styled.div`
+  display: flex;
+  justify-content: space-around;
+`
+
 export const Skills = styled.div`
   margin-top: 15px;
+`
+
+export const OpenFieldButton = styled.div`
+  border: 2px gold solid;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 2px;
 `
 
 export const Skill = styled.div`
