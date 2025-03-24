@@ -70,10 +70,23 @@ export const FeatureField = styled.div`
 
 export const FeatureText = styled.div`
   background: #2a2e35;
-  border-bottom: 2px gold solid;
-  border-top: 2px gold solid;
+  border-bottom: 1px gold solid;
+  border-top: 1px gold solid;
   border-radius: 5px;
   padding: 5px;
   padding: 0.5rem;
   margin: 10px 0;
+`
+export const FeatureTitle = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+
+  h2 {
+    font-size: clamp(14px, 2vw, 20px);
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 `

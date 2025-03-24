@@ -16,6 +16,7 @@ import {
   Content,
   FeatureField,
   FeatureText,
+  FeatureTitle,
   Field,
   Header,
   OpenFieldButton,
@@ -23,16 +24,28 @@ import {
   StatGrid,
 } from './style'
 
-
 const reduce = (state, action) => {
-  return {
-    ...state,
-    openSection: state.openSection === action.section ? null : action.section,
+  if (action.type === 'set_section') {
+    return {
+      ...state,
+      openSection: state.openSection === action.section ? null : action.section,
+      openField: null,
+    }
   }
+  if (action.type === 'set_field') {
+    return {
+      ...state,
+
+      openField: state.openField === action.index ? null : action.index,
+    }
+  }
+
+  return state
 }
 
 const initialState = {
   openSection: null,
+  openField: null,
 }
 
 const CharacterSheet = () => {
@@ -65,7 +78,9 @@ const CharacterSheet = () => {
       </StatGrid>
 
       <Content>
-        <OpenFieldButton onClick={() => dispatch({ section: 'skills' })}>
+        <OpenFieldButton
+          onClick={() => dispatch({ type: 'set_section', section: 'skills' })}
+        >
           <GiBullseye />
           <h3>Skills</h3>
           {state.openSection === 'skills' ? (
@@ -84,7 +99,9 @@ const CharacterSheet = () => {
       </Content>
 
       <Content>
-        <OpenFieldButton onClick={() => dispatch({ section: 'actions' })}>
+        <OpenFieldButton
+          onClick={() => dispatch({ type: 'set_section', section: 'actions' })}
+        >
           <GiZeusSword />
           <h3>Actions</h3>
           {state.openSection === 'actions' ? (
@@ -128,7 +145,9 @@ const CharacterSheet = () => {
       </Content>
 
       <Content>
-        <OpenFieldButton onClick={() => dispatch({ section: 'features' })}>
+        <OpenFieldButton
+          onClick={() => dispatch({ type: 'set_section', section: 'features' })}
+        >
           <GiMightyForce />
           <h3>Features</h3>
           {state.openSection === 'features' ? (
@@ -138,19 +157,38 @@ const CharacterSheet = () => {
           )}
         </OpenFieldButton>
         {state.openSection === 'features' && (
-            <FeatureField>{
-                CharacterClass.class.barbarian.features.map((feature, i) => (
-                  <FeatureText key={i}>
-                    <h2>{feature.title}</h2>
-                    <div style={{ marginTop: 20 }} dangerouslySetInnerHTML={{ __html: feature.text }} />
-                  </FeatureText>
-                ))}
-            </FeatureField>
+          <FeatureField>
+            {CharacterClass.class.barbarian.features.map((feature, i) => (
+              <FeatureText key={i}>
+                <FeatureTitle>
+                  <span>{`Level: ${feature.level}`}</span>
+                  <h2>{feature.title}</h2>
+                  <div
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => dispatch({ type: 'set_field', index: i })}
+                  >
+                    <span style={{ fontSize: 10 }}>
+                      {feature.referenceBook}
+                    </span>
+                    <span>{state.openField === i ? ' [-]' : ' [+]'}</span>
+                  </div>
+                </FeatureTitle>
+                {state.openField === i && (
+                  <div
+                    style={{ marginTop: 20 }}
+                    dangerouslySetInnerHTML={{ __html: feature.text }}
+                  />
+                )}
+              </FeatureText>
+            ))}
+          </FeatureField>
         )}
       </Content>
 
       <Content>
-        <OpenFieldButton onClick={() => dispatch({ section: 'spells' })}>
+        <OpenFieldButton
+          onClick={() => dispatch({ type: 'set_section', section: 'spells' })}
+        >
           <GiSpellBook />
           <h3>Spells</h3>
           {state.openSection === 'spells' ? (
@@ -159,11 +197,12 @@ const CharacterSheet = () => {
             <IoMdArrowDropdownCircle />
           )}
         </OpenFieldButton>
-
       </Content>
 
       <Content>
-        <OpenFieldButton onClick={() => dispatch({ section: 'iventory' })}>
+        <OpenFieldButton
+          onClick={() => dispatch({ type: 'set_section', section: 'iventory' })}
+        >
           <GiPaperBagFolded />
           <h3>Iventory</h3>
           {state.openSection === 'iventory' ? (
@@ -175,7 +214,11 @@ const CharacterSheet = () => {
       </Content>
 
       <Content>
-        <OpenFieldButton onClick={() => dispatch({ section: 'background' })}>
+        <OpenFieldButton
+          onClick={() =>
+            dispatch({ type: 'set_section', section: 'background' })
+          }
+        >
           <GiPaperBagFolded />
           <h3>Background</h3>
           {state.openSection === 'background' ? (
