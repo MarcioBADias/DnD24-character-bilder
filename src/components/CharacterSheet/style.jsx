@@ -63,3 +63,17 @@ export const Field = styled.div`
   justify-content: space-between;
   margin: 3px 0;
 `
+
+export const FeatureField = styled.div`
+  text-align: justify;
+`
+
+export const FeatureText = styled.div`
+  background: #2a2e35;
+  border-bottom: 2px gold solid;
+  border-top: 2px gold solid;
+  border-radius: 5px;
+  padding: 5px;
+  padding: 0.5rem;
+  margin: 10px 0;
+`

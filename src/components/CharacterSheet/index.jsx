@@ -1,5 +1,7 @@
-import React, { useReducer, useState } from 'react'
+import React, { useReducer } from 'react'
 import { IoMdArrowDropdownCircle, IoMdArrowDropupCircle } from 'react-icons/io'
+import { attributes, skills } from '../../initial_data'
+import { CharacterClass } from '../../rules/class'
 import {
   GiSpellBook,
   GiZeusSword,
@@ -12,6 +14,8 @@ import {
   CharacterName,
   Container,
   Content,
+  FeatureField,
+  FeatureText,
   Field,
   Header,
   OpenFieldButton,
@@ -19,173 +23,6 @@ import {
   StatGrid,
 } from './style'
 
-const attributes = [
-  {
-    type: 'STR',
-    value: 10,
-    bonus: '+2',
-    saving: '+2',
-  },
-  {
-    type: 'DEX',
-    value: 10,
-    bonus: '+2',
-    saving: '+2',
-  },
-  {
-    type: 'CON',
-    value: 10,
-    bonus: '+2',
-    saving: '+2',
-  },
-  {
-    type: 'INT',
-    value: 10,
-    bonus: '+2',
-    saving: '+2',
-  },
-  {
-    type: 'WIS',
-    value: 10,
-    bonus: '+2',
-    saving: '+2',
-  },
-  {
-    type: 'CHA',
-    value: 10,
-    bonus: '+2',
-    saving: '+2',
-  },
-]
-
-const skills = [
-  {
-    name: 'acrobatics',
-    attr: 'DEX',
-    value: 0,
-    proeficiency: false,
-    expertise: false,
-  },
-  {
-    name: 'animal handling',
-    attr: 'WIS',
-    value: 0,
-    proeficiency: false,
-    expertise: false,
-  },
-  {
-    name: 'arcana',
-    attr: 'INT',
-    value: 0,
-    proeficiency: false,
-    expertise: false,
-  },
-  {
-    name: 'athletics',
-    attr: 'STR',
-    value: 0,
-    proeficiency: false,
-    expertise: false,
-  },
-  {
-    name: 'deception',
-    attr: 'CHA',
-    value: 0,
-    proeficiency: false,
-    expertise: false,
-  },
-  {
-    name: 'history',
-    attr: 'INT',
-    value: 0,
-    proeficiency: false,
-    expertise: false,
-  },
-  {
-    name: 'insight',
-    attr: 'WIS',
-    value: 0,
-    proeficiency: false,
-    expertise: false,
-  },
-  {
-    name: 'intimidation',
-    attr: 'CHA',
-    value: 0,
-    proeficiency: false,
-    expertise: false,
-  },
-  {
-    name: 'investigation',
-    attr: 'INT',
-    value: 0,
-    proeficiency: false,
-    expertise: false,
-  },
-  {
-    name: 'medicine',
-    attr: 'WIS',
-    value: 0,
-    proeficiency: false,
-    expertise: false,
-  },
-  {
-    name: 'nature',
-    attr: 'INT',
-    value: 0,
-    proeficiency: false,
-    expertise: false,
-  },
-  {
-    name: 'perception',
-    attr: 'WIS',
-    value: 0,
-    proeficiency: false,
-    expertise: false,
-  },
-  {
-    name: 'performance',
-    attr: 'CHA',
-    value: 0,
-    proeficiency: false,
-    expertise: false,
-  },
-  {
-    name: 'persuasion',
-    attr: 'CHA',
-    value: 0,
-    proeficiency: false,
-    expertise: false,
-  },
-  {
-    name: 'religion',
-    attr: 'INT',
-    value: 0,
-    proeficiency: false,
-    expertise: false,
-  },
-  {
-    name: 'sleight of hand',
-    attr: 'DEX',
-    value: 0,
-    proeficiency: false,
-    expertise: false,
-  },
-  {
-    name: 'stealth',
-    attr: 'DEX',
-    value: 0,
-    proeficiency: false,
-    expertise: false,
-  },
-  {
-    name: 'survival',
-    attr: 'WIS',
-    value: 0,
-    proeficiency: false,
-    expertise: false,
-  },
-]
 
 const reduce = (state, action) => {
   return {
@@ -300,6 +137,16 @@ const CharacterSheet = () => {
             <IoMdArrowDropdownCircle />
           )}
         </OpenFieldButton>
+        {state.openSection === 'features' && (
+            <FeatureField>{
+                CharacterClass.class.barbarian.features.map((feature, i) => (
+                  <FeatureText key={i}>
+                    <h2>{feature.title}</h2>
+                    <div style={{ marginTop: 20 }} dangerouslySetInnerHTML={{ __html: feature.text }} />
+                  </FeatureText>
+                ))}
+            </FeatureField>
+        )}
       </Content>
 
       <Content>
@@ -312,6 +159,7 @@ const CharacterSheet = () => {
             <IoMdArrowDropdownCircle />
           )}
         </OpenFieldButton>
+
       </Content>
 
       <Content>
