@@ -11,10 +11,10 @@ import {
   AttrField,
   CharacterName,
   Container,
+  Content,
+  Field,
   Header,
   OpenFieldButton,
-  Skill,
-  Skills,
   StatBox,
   StatGrid,
 } from './style'
@@ -227,7 +227,7 @@ const CharacterSheet = () => {
         ))}
       </StatGrid>
 
-      <Skills>
+      <Content>
         <OpenFieldButton onClick={() => dispatch({ section: 'skills' })}>
           <GiBullseye />
           <h3>Skills</h3>
@@ -239,14 +239,14 @@ const CharacterSheet = () => {
         </OpenFieldButton>
         {state.openSection === 'skills' &&
           skills.map((skill, i) => (
-            <Skill key={i}>
+            <Field key={i}>
               <span>{skill.name}</span>
               <span>+{skill.value}</span>
-            </Skill>
+            </Field>
           ))}
-      </Skills>
+      </Content>
 
-      <Skills>
+      <Content>
         <OpenFieldButton onClick={() => dispatch({ section: 'actions' })}>
           <GiZeusSword />
           <h3>Actions</h3>
@@ -256,9 +256,41 @@ const CharacterSheet = () => {
             <IoMdArrowDropdownCircle />
           )}
         </OpenFieldButton>
-      </Skills>
+        {state.openSection === 'actions' && (
+          <>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <Field style={{ alignItems: 'center', minHeight: 60 }}>
+                <span>Action</span>
+              </Field>
+              <Field style={{ alignItems: 'center', minHeight: 60 }}>
+                <span>Bonnus Action</span>
+              </Field>
+              <Field style={{ alignItems: 'center', minHeight: 60 }}>
+                <span>Reaction</span>
+              </Field>
+            </div>
+            <div>
+              <Field>
+                <span>Longsword: +4</span>
+                <span>Reach: 5ft</span>
+                <span>Damage: 1d8 +2 Slashing</span>
+              </Field>
+              <Field>
+                <span>Firebolt: +4</span>
+                <span>Reach: 120ft</span>
+                <span>Damage: 1d8 Fire</span>
+              </Field>
+              <Field>
+                <span>Sacred Flame: 14</span>
+                <span>Reach: 120ft</span>
+                <span>Damage: 1d8 Lighting</span>
+              </Field>
+            </div>
+          </>
+        )}
+      </Content>
 
-      <Skills>
+      <Content>
         <OpenFieldButton onClick={() => dispatch({ section: 'features' })}>
           <GiMightyForce />
           <h3>Features</h3>
@@ -268,9 +300,9 @@ const CharacterSheet = () => {
             <IoMdArrowDropdownCircle />
           )}
         </OpenFieldButton>
-      </Skills>
+      </Content>
 
-      <Skills>
+      <Content>
         <OpenFieldButton onClick={() => dispatch({ section: 'spells' })}>
           <GiSpellBook />
           <h3>Spells</h3>
@@ -280,11 +312,11 @@ const CharacterSheet = () => {
             <IoMdArrowDropdownCircle />
           )}
         </OpenFieldButton>
-      </Skills>
+      </Content>
 
-      <Skills>
-        <OpenFieldButton>
-          <GiPaperBagFolded onClick={() => dispatch({ section: 'iventory' })} />
+      <Content>
+        <OpenFieldButton onClick={() => dispatch({ section: 'iventory' })}>
+          <GiPaperBagFolded />
           <h3>Iventory</h3>
           {state.openSection === 'iventory' ? (
             <IoMdArrowDropupCircle />
@@ -292,9 +324,9 @@ const CharacterSheet = () => {
             <IoMdArrowDropdownCircle />
           )}
         </OpenFieldButton>
-      </Skills>
+      </Content>
 
-      <Skills>
+      <Content>
         <OpenFieldButton onClick={() => dispatch({ section: 'background' })}>
           <GiPaperBagFolded />
           <h3>Background</h3>
@@ -304,7 +336,7 @@ const CharacterSheet = () => {
             <IoMdArrowDropdownCircle />
           )}
         </OpenFieldButton>
-      </Skills>
+      </Content>
     </Container>
   )
 }

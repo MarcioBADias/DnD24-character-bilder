@@ -41,7 +41,7 @@ export const AttrField = styled.div`
   justify-content: space-around;
 `
 
-export const Skills = styled.div`
+export const Content = styled.div`
   margin-top: 15px;
 `
 
@@ -55,7 +55,7 @@ export const OpenFieldButton = styled.div`
   padding: 5px 10px;
 `
 
-export const Skill = styled.div`
+export const Field = styled.div`
   background: #2a2e35;
   padding: 5px;
   border-radius: 5px;
