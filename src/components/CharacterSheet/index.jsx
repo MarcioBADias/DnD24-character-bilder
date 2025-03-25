@@ -158,13 +158,38 @@ const CharacterSheet = () => {
         {state.openSection === 'actions' && (
           <>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <Field style={{ alignItems: 'center', minHeight: 60 }}>
+              <Field
+                style={{
+                  alignItems: 'center',
+                  border: '1px gold solid',
+                  cursor: 'pointer',
+                  minHeight: 60,
+                  width: '30%',
+                  justifyContent: 'center',
+                }}
+              >
                 <span>Action</span>
               </Field>
-              <Field style={{ alignItems: 'center', minHeight: 60 }}>
+              <Field
+                style={{
+                  alignItems: 'center',
+                  cursor: 'pointer',
+                  minHeight: 60,
+                  width: '30%',
+                  justifyContent: 'center',
+                }}
+              >
                 <span>Bonnus Action</span>
               </Field>
-              <Field style={{ alignItems: 'center', minHeight: 60 }}>
+              <Field
+                style={{
+                  alignItems: 'center',
+                  cursor: 'pointer',
+                  minHeight: 60,
+                  width: '30%',
+                  justifyContent: 'center',
+                }}
+              >
                 <span>Reaction</span>
               </Field>
             </div>
