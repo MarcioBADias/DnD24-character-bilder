@@ -44,10 +44,10 @@ const reduce = (state, action) => {
 }
 
 const initialState = {
-  level: 1,
+  level: 4,
   background: 'Acolyte',
   race: 'Variant Human',
-  class: 'Cleric',
+  class: 'cleric',
   subClass: null,
   characterImg:
     'https://i0.wp.com/dmdave.com/wp-content/uploads/2019/01/space-cleric-2-1.jpg?fit=600%2C338&ssl=1',
@@ -228,12 +228,12 @@ const CharacterSheet = () => {
         </OpenFieldButton>
         {state.openSection === 'features' && (
           <FeatureField>
-            {CharacterClass.class.barbarian.features
+            {CharacterClass.class?.[state.class].features
               ?.filter((item) => item.level <= state.level)
               .map((feature, i) => (
                 <FeatureText key={i}>
                   <FeatureTitle>
-                    <span>{`Level: ${feature.level}`}</span>
+                    <span style={{ fontSize: 10 }}>{`Level: ${feature.level}`}</span>
                     <h2>{feature.title}</h2>
                     <div
                       style={{ cursor: 'pointer' }}
