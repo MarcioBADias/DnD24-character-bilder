@@ -44,6 +44,7 @@ const reduce = (state, action) => {
 }
 
 const initialState = {
+  level: 1,
   openSection: null,
   openField: null,
 }
@@ -54,7 +55,7 @@ const CharacterSheet = () => {
     <Container>
       <Header>
         <CharacterName>Nome do Personagem</CharacterName>
-        <StatBox>HP: 17/17</StatBox>
+        <StatBox>{`Level: ${state.level}`}</StatBox>
       </Header>
       <StatGrid>
         {attributes.map((attr, i) => (
@@ -158,29 +159,31 @@ const CharacterSheet = () => {
         </OpenFieldButton>
         {state.openSection === 'features' && (
           <FeatureField>
-            {CharacterClass.class.barbarian.features.map((feature, i) => (
-              <FeatureText key={i}>
-                <FeatureTitle>
-                  <span>{`Level: ${feature.level}`}</span>
-                  <h2>{feature.title}</h2>
-                  <div
-                    style={{ cursor: 'pointer' }}
-                    onClick={() => dispatch({ type: 'set_field', index: i })}
-                  >
-                    <span style={{ fontSize: 10 }}>
-                      {feature.referenceBook}
-                    </span>
-                    <span>{state.openField === i ? ' [-]' : ' [+]'}</span>
-                  </div>
-                </FeatureTitle>
-                {state.openField === i && (
-                  <div
-                    style={{ marginTop: 20 }}
-                    dangerouslySetInnerHTML={{ __html: feature.text }}
-                  />
-                )}
-              </FeatureText>
-            ))}
+            {CharacterClass.class.barbarian.features
+              ?.filter((item) => item.level <= state.level)
+              .map((feature, i) => (
+                <FeatureText key={i}>
+                  <FeatureTitle>
+                    <span>{`Level: ${feature.level}`}</span>
+                    <h2>{feature.title}</h2>
+                    <div
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => dispatch({ type: 'set_field', index: i })}
+                    >
+                      <span style={{ fontSize: 10 }}>
+                        {feature.referenceBook}
+                      </span>
+                      <span>{state.openField === i ? ' [-]' : ' [+]'}</span>
+                    </div>
+                  </FeatureTitle>
+                  {state.openField === i && (
+                    <div
+                      style={{ marginTop: 20 }}
+                      dangerouslySetInnerHTML={{ __html: feature.text }}
+                    />
+                  )}
+                </FeatureText>
+              ))}
           </FeatureField>
         )}
       </Content>
