@@ -47,7 +47,7 @@ const initialState = {
   level: 4,
   background: 'Acolyte',
   race: 'Variant Human',
-  class: 'cleric',
+  class: 'druid',
   subClass: null,
   characterImg:
     'https://i0.wp.com/dmdave.com/wp-content/uploads/2019/01/space-cleric-2-1.jpg?fit=600%2C338&ssl=1',

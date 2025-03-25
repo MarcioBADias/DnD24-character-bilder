@@ -1,6 +1,139 @@
 export const CharacterClass = {
         class: {
-            artificer: {},
+            artificer: {
+                features: [
+                        {
+                        level: 1,
+                        title: "Optional Rule: Firearm Proficiency",
+                        referenceBook: "TCE p9",
+                        effects: null,
+                        text: "The secrets of creating and operating gunpowder weapons have been discovered in various corners of the D&D multiverse. If your Dungeon Master uses the rules on firearms in chapter 9 of the Dungeon Master's Guide and your artificer has been exposed to the operation of such weapons, your artificer is proficient with them."
+                        },
+                        {
+                        level: 1,
+                        title: "Magical Tinkering",
+                        referenceBook: "TCE p9",
+                        effects: null,
+                        text: `1st-level artificer feature
+                    
+                        You've learned how to invest a spark of magic into mundane objects. To use this ability, you must have thieves' tools or artisan's tools in hand. You then touch a Tiny nonmagical object as an action and give it one of the following magical properties of your choice:
+                    
+                        - The object sheds bright light in a 5-foot radius and dim light for an additional 5 feet.
+                        - Whenever tapped by a creature, the object emits a recorded message that can be heard up to 10 feet away. You utter the message when you bestow this property on the object, and the recording can be no more than 6 seconds long.
+                        - The object continuously emits your choice of an odor or a nonverbal sound (wind, waves, chirping, or the like). The chosen phenomenon is perceivable up to 10 feet away.
+                        - A static visual effect appears on one of the object's surfaces. This effect can be a picture, up to 25 words of text, lines and shapes, or a mixture of these elements, as you like.
+                    
+                        The chosen property lasts indefinitely. As an action, you can touch the object and end the property early.
+                    
+                        You can bestow magic on multiple objects, touching one object each time you use this feature, though a single object can only bear one property at a time. The maximum number of objects you can affect with this feature at one time is equal to your Intelligence modifier (minimum of one object). If you try to exceed your maximum, the oldest property immediately ends, and then the new property applies.`
+                        },
+                        {
+                        level: 1,
+                        title: "Spellcasting",
+                        referenceBook: "TCE p9",
+                        effects: null,
+                        text: `1st-level artificer feature
+                    
+                        You've studied the workings of magic and how to cast spells, channeling the magic through objects. To observers, you don't appear to be casting spells in a conventional way; you appear to produce wonders from mundane items and outlandish inventions.
+                    
+                        **Tools Required**  
+                        You produce your artificer spell effects through your tools. You must have a spellcasting focus—specifically thieves' tools or some kind of artisan's tool—in hand when you cast any spell with this Spellcasting feature (meaning the spell has an 'M' component when you cast it). You must be proficient with the tool to use it in this way. See chapter 5, "Equipment," in the Player's Handbook for texts of these tools.
+                    
+                        After you gain the Infuse Item feature at 2nd level, you can also use any item bearing one of your infusions as a spellcasting focus.
+                    
+                        **The Magic of Artifice**  
+                        As an artificer, you use tools when you cast your spells. When describing your spellcasting, think about how you're using a tool to perform the spell effect. If you cast cure wounds using alchemist's supplies, you could be quickly producing a salve. If you cast it using tinker's tools, you might have a miniature mechanical spider that binds wounds. When you cast poison spray, you could fling foul chemicals or use a wand that spits venom. The effect of the spell is the same as for a spellcaster of any other class, but your method of spellcasting is special.
+                    
+                        The same principle applies when you prepare your spells. As an artificer, you don't study a spellbook or pray to prepare your spells. Instead, you work with your tools and create the specialized items you'll use to produce your effects. If you replace cure wounds with heat metal, you might be altering the device you use to heal—perhaps modifying a tool so that it channels heat instead of healing energy.
+                    
+                        **Cantrips (0-Level Spells)**  
+                        At 1st level, you know two cantrips of your choice from the artificer spell list. At higher levels, you learn additional artificer cantrips of your choice, as shown in the Cantrips Known column of the Artificer table.
+                        
+                        **Preparing and Casting Spells**  
+                        The Artificer table shows how many spell slots you have to cast your artificer spells. To cast one of your artificer spells of 1st level or higher, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.
+                        
+                        You prepare the list of artificer spells that are available for you to cast, choosing from the artificer spell list. When you do so, choose a number of artificer spells equal to your Intelligence modifier + half your artificer level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots.`
+                        },
+                        {
+                        level: 2,
+                        title: "Infuse Item",
+                        referenceBook: "TCE p9",
+                        effects: null,
+                        text: `2nd-level artificer feature
+                    
+                        You've gained the ability to imbue mundane items with certain magical infusions, turning those objects into magic items.
+                    
+                        **Infusions Known**  
+                        When you gain this feature, pick four artificer infusions to learn, choosing from the "Artificer Infusions" section at the end of the class's text. You learn additional infusions of your choice when you reach certain levels in this class, as shown in the Infusions Known column of the Artificer table.
+                    
+                        **Infusing an Item**  
+                        Whenever you finish a long rest, you can touch a nonmagical object and imbue it with one of your artificer infusions, turning it into a magic item. An infusion works on only certain kinds of objects, as specified in the infusion's text. If the item requires attunement, you can attune yourself to it the instant you infuse the item. If you decide to attune to the item later, you must do so using the normal process for attunement (see "Attunement" in chapter 7 of the Dungeon Master's Guide).
+                        
+                        You can infuse more than one nonmagical object at the end of a long rest; the maximum number of objects appears in the Infused Items column of the Artificer table.`
+                        },
+                        {
+                        level: 3,
+                        title: "Artificer Specialist",
+                        referenceBook: "TCE p9",
+                        effects: null,
+                        text: "Choose the type of specialist you are, each of which is detailed at the end of the class's text. Your choice grants you features at 5th level and again at 9th and 15th level."
+                        },
+                        {
+                        level: 3,
+                        title: "The Right Tool for the Job",
+                        referenceBook: "TCE p9",
+                        effects: null,
+                        text: `3rd-level artificer feature
+                    
+                        You've learned how to produce exactly the tool you need: with thieves' tools or artisan's tools in hand, you can magically create one set of artisan's tools in an unoccupied space within 5 feet of you. This creation requires 1 hour of uninterrupted work, which can coincide with a short or long rest. Though the product of magic, the tools are nonmagical, and they vanish when you use this feature again.`
+                        },
+                        {
+                        level: 4,
+                        title: "Ability Score Improvement",
+                        referenceBook: "TCE p9",
+                        effects: null,
+                        text: `4th-level artificer feature
+                    
+                        When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.
+                        
+                        If your DM allows the use of feats, you may instead take a feat.`
+                        },
+                        {
+                        level: 5,
+                        title: "Artificer Specialist Feature",
+                        referenceBook: "TCE p9",
+                        effects: null,
+                        text: "You gain a feature granted by your Artificer Specialist choice."
+                        },
+                        {
+                        level: 6,
+                        title: "Tool Expertise",
+                        referenceBook: "TCE p9",
+                        effects: null,
+                        text: "Your proficiency bonus is now doubled for any ability check you make that uses your proficiency with a tool."
+                        },
+                        {
+                        level: 7,
+                        title: "Flash of Genius",
+                        referenceBook: "TCE p9",
+                        text: `7th-level artificer feature
+                    
+                        You've gained the ability to come up with solutions under pressure. When you or another creature you can see within 30 feet of you makes an ability check or a saving throw, you can use your reaction to add your Intelligence modifier to the roll.
+                        
+                        You can use this feature a number of times equal to your Intelligence modifier (minimum of once). You regain all expended uses when you finish a long rest.`
+                        },
+                        {
+                        level: 8,
+                        title: "Ability Score Improvement",
+                        referenceBook: "TCE p9",
+                        effects: null,
+                        text: `8th-level artificer feature                    
+                            When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.
+                            If your DM allows the use of feats, you may instead take a feat.`
+                        },
+                    ]
+                  
+            },
             barbarian: {
                 features:[
                     {
@@ -241,7 +374,7 @@ export const CharacterClass = {
                         title: "Spellcasting",
                         text: `
                             <div style="margin-bottom: 20px">
-                                You have learned to cast spells through your bardic arts. See chapter 7 for the rules on spellcasting. The information below details how you use those rules with Bard spells, which appear in the Bard spell list later in the class's description.
+                                You have learned to cast spells through your bardic arts. See chapter 7 for the rules on spellcasting. The information below details how you use those rules with Bard spells, which appear in the Bard spell list later in the class's text.
                             </div>
                             <h4>Cantrips:</h4>
                             <div style="margin-bottom: 20px">
@@ -397,7 +530,7 @@ export const CharacterClass = {
                         title: 'Spellcasting',
                         text: `
                             <div style="margin-bottom: 20px">
-                            You have learned to cast spells through prayer and meditation. See chapter 7 for the rules on spellcasting. The information below details how you use those rules with Cleric spells, which appear on the Cleric spell list later in the class's description.
+                            You have learned to cast spells through prayer and meditation. See chapter 7 for the rules on spellcasting. The information below details how you use those rules with Cleric spells, which appear on the Cleric spell list later in the class's text.
                             </div>
                             <h4>Cantrips:</h4>
                             <div style="margin-bottom: 20px">
@@ -1098,7 +1231,174 @@ export const CharacterClass = {
                 ]
             },
             paladin: {
-                
+                features: [
+                    {
+                        level: 1,
+                        title: "Lay on Hands",
+                        text: `
+                            <div style="margin-bottom: 20px">
+                                Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you finish a Long Rest. With that pool, you can restore a total number of Hit Points equal to five times your Paladin level.
+                            </div>
+                            <div style="margin-bottom: 20px">
+                                As a Bonus Action, you can touch a creature (which could be yourself) and draw power from the pool of healing to restore a number of Hit Points to that creature, up to the maximum amount remaining in the pool.
+                            </div>
+                            <div style="margin-bottom: 20px">
+                                You can also expend 5 Hit Points from the pool of healing power to remove the Poisoned condition from the creature; those points don't also restore Hit Points to the creature.
+                            </div>
+                        `,
+                        effects: null,
+                        referenceBook: "PHB'24 p109"
+                    },
+                    {
+                        level: 1,
+                        title: "Spellcasting",
+                        text: `
+                            <div style="margin-bottom: 20px">
+                                You have learned to cast spells through prayer and meditation. See chapter 7 for the rules on spellcasting. The information below details how you use those rules with Paladin spells, which appear in the Paladin spell list later in the class's text.
+                            </div>
+                            <h4>Spell Slots:</h4>
+                            <div style="margin-bottom: 20px">
+                                The Paladin Features table shows how many spell slots you have to cast your level 1+ spells. You regain all expended slots when you finish a Long Rest.
+                            </div>
+                            <h4>Prepared Spells of Level 1+:</h4>
+                            <div style="margin-bottom: 20px">
+                                You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose two level 1 Paladin spells. Heroism and Searing Smite are recommended.
+                            </div>
+                            <h4>Changing Your Prepared Spells:</h4>
+                            <div style="margin-bottom: 20px">
+                                Whenever you finish a Long Rest, you can replace one spell on your list with another Paladin spell for which you have spell slots.
+                            </div>
+                            <h4>Spellcasting Ability:</h4>
+                            <div style="margin-bottom: 20px">
+                                Charisma is your spellcasting ability for your Paladin spells.
+                            </div>
+                            <h4>Spellcasting Focus:</h4>
+                            <div style="margin-bottom: 20px">
+                                You can use a Holy Symbol as a Spellcasting Focus for your Paladin spells.
+                            </div>
+                        `,
+                        effects: null,
+                        referenceBook: "PHB'24 p109"
+                    },
+                    {
+                        level: 1,
+                        title: "Weapon Mastery",
+                        text: `
+                            <div style="margin-bottom: 20px">
+                                Your training with weapons allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Longswords and Javelins.
+                            </div>
+                            <div style="margin-bottom: 20px">
+                                Whenever you finish a Long Rest, you can change the kinds of weapons you chose. For example, you could switch to using the mastery properties of Halberds and Flails.
+                            </div>
+                        `,
+                        effects: null,
+                        referenceBook: "PHB'24 p110"
+                    },
+                    {
+                        level: 2,
+                        title: "Divine Smite",
+                        text: `
+                            <div style="margin-bottom: 20px">
+                                When you hit a creature with a melee weapon attack, you can expend one spell slot to deal radiant damage to the target, in addition to the weapon’s damage.
+                            </div>
+                            <div style="margin-bottom: 20px">
+                                The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8. The damage increases by 1d8 if the target is an Undead or a Fiend.
+                            </div>
+                        `,
+                        effects: null,
+                        referenceBook: "PHB'24 p111"
+                    },
+                    {
+                        level: 2,
+                        title: "Fighting Style",
+                        text: `
+                            <div style="margin-bottom: 20px">
+                                You adopt a particular style of fighting as your specialty. Choose one of the Fighting Style options available to Paladins.
+                            </div>
+                        `,
+                        effects: null,
+                        referenceBook: "PHB'24 p111"
+                    },
+                    {
+                        level: 3,
+                        title: "Divine Health",
+                        text: `
+                            <div style="margin-bottom: 20px">
+                                By 3rd level, the divine magic flowing through you makes you immune to disease.
+                            </div>
+                        `,
+                        effects: null,
+                        referenceBook: "PHB'24 p112"
+                    },
+                    {
+                        level: 3,
+                        title: "Paladin Subclass",
+                        text: "You gain a Paladin subclass of your choice. A subclass is a specialization that grants you features at certain Paladin levels. For the rest of your career, you gain each of your subclass's features that are of your Paladin level or lower.\n\nBreaking Your Oath:\nA Paladin tries to hold to the highest standards of conduct, but even the most dedicated are fallible. Sometimes a Paladin transgresses their oath.\n\nA Paladin who has broken a vow typically seeks absolution, spending an all-night vigil as a sign of penitence or undertaking a fast. After a rite of forgiveness, the Paladin starts fresh.\n\nIf your Paladin unrepentantly violates their oath, talk to your DM. Your Paladin should probably take a more appropriate subclass or even abandon the class and adopt another one.",
+                        effects: null,
+                        referenceBook: "PHB'24 p111"
+                    },
+                    {
+                        level: 4,
+                        title: "Ability Score Improvement",
+                        text: `
+                            <div style="margin-bottom: 20px">
+                                When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1.
+                            </div>
+                        `,
+                        effects: null,
+                        referenceBook: "PHB'24 p113"
+                    },
+                    {
+                        level: 5,
+                        title: "Extra Attack",
+                        text: "You can attack twice instead of once whenever you take the Attack action on your turn.",
+                        effects: null,
+                        referenceBook: "PHB'24 p111"
+                    },
+                    {
+                        level: 5,
+                        title: "Faithful Steed",
+                        text: `
+                            <div style="margin-bottom: 20px">
+                                You can cast the Find Steed spell without expending a spell slot. When you do, the steed takes on a form reflecting your oath.
+                            </div>
+                        `,
+                        effects: null,
+                        referenceBook: "PHB'24 p113"
+                    },
+                    {
+                        level: 6,
+                        title: "Aura of Protection",
+                        text: "You radiate a protective, unseeable aura in a 10-foot Emanation that originates from you. The aura is inactive while you have the Incapacitated condition.\n\nYou and your allies in the aura gain a bonus to saving throws equal to your Charisma modifier (minimum bonus of +1).\n\nIf another Paladin is present, a creature can benefit from only one Aura of Protection at a time; the creature chooses which aura while in them.",
+                        effects: null,
+                        referenceBook: "PHB'24 p111"
+                    },
+                    {
+                        level: 7,
+                        title: "Subclass Feature",
+                        text: `
+                            <div style="margin-bottom: 20px">
+                                You gain a feature granted by your chosen subclass at level 7.
+                            </div>
+                        `,
+                        effects: null,
+                        referenceBook: "PHB'24 p114"
+                    },
+                    {
+                        level: 8,
+                        title: "Aura of Courage",
+                        text: "Starting at 8th level, you and friendly creatures within 10 feet of you can’t be frightened while you are conscious.",
+                        effects: null,
+                        referenceBook: "PHB'24 p115"
+                    },
+                    {
+                        level: 8,
+                        title: "Ability Score Improvement",
+                        text: "You gain the Ability Score Improvement Feat or another feat of your choice for which you qualify.",
+                        effects: null,
+                        referenceBook: "PHB'24 p111"
+                    }
+                ]
             },
             ranger: {},
             rogue: {},
