@@ -45,6 +45,16 @@ const reduce = (state, action) => {
 
 const initialState = {
   level: 1,
+  background: 'Acolyte',
+  race: 'Variant Human',
+  class: 'Cleric',
+  subClass: null,
+  characterImg:
+    'https://i0.wp.com/dmdave.com/wp-content/uploads/2019/01/space-cleric-2-1.jpg?fit=600%2C338&ssl=1',
+  hp: 17,
+  speed: 30,
+  ac: 18,
+  init: 2,
   openSection: null,
   openField: null,
 }
@@ -53,10 +63,44 @@ const CharacterSheet = () => {
   const [state, dispatch] = useReducer(reduce, initialState)
   return (
     <Container>
+      <div>
+        <img
+          style={{ maxHeight: '20%', width: '100%', borderRadius: 10 }}
+          src={state.characterImg}
+          alt="Avatar do personagem"
+        />
+      </div>
       <Header>
-        <CharacterName>Nome do Personagem</CharacterName>
-        <StatBox>{`Level: ${state.level}`}</StatBox>
+        <div>
+          <CharacterName>Nome do Personagem</CharacterName>
+          <span>{`${state.background} ${state.race} ${state.class} ${state.level}`}</span>
+        </div>
+        <StatBox>{`HP: ${state.hp}`}</StatBox>
       </Header>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div style={{ width: '28%' }}>
+          <StatBox style={{ height: '50%' }}>{`Speed: ${state.speed}`}</StatBox>
+          <StatBox>{`Init: ${state.init}`}</StatBox>
+        </div>
+        <div style={{ width: '40%' }}>
+          <StatBox
+            style={{
+              alignItems: 'center',
+              display: 'flex',
+              flexDirection: 'column',
+              height: '90%',
+              textAlign: 'center',
+            }}
+          >
+            <span>AC:</span>
+            <span style={{ fontSize: 50 }}>{state.ac}</span>
+          </StatBox>
+        </div>
+        <div style={{ width: '28%' }} v>
+          <StatBox>Rest</StatBox>
+          <StatBox>Heroic Inspiration</StatBox>
+        </div>
+      </div>
       <StatGrid>
         {attributes.map((attr, i) => (
           <div key={i}>
