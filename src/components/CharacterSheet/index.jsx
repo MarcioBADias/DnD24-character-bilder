@@ -240,7 +240,7 @@ const CharacterSheet = () => {
                       onClick={() => dispatch({ type: 'set_field', index: i })}
                     >
                       <span style={{ fontSize: 10 }}>
-                        {feature.referenceBook}
+                        {feature.source}
                       </span>
                       <span>{state.openField === i ? ' [-]' : ' [+]'}</span>
                     </div>
@@ -248,7 +248,7 @@ const CharacterSheet = () => {
                   {state.openField === i && (
                     <div
                       style={{ marginTop: 20 }}
-                      dangerouslySetInnerHTML={{ __html: feature.text }}
+                      dangerouslySetInnerHTML={{ __html: feature.description }}
                     />
                   )}
                 </FeatureText>
