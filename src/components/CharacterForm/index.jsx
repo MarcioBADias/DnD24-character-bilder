@@ -36,6 +36,11 @@ const CreateCharacter = () => {
           </option>
         ))}
         </select>
+
+        {
+          state.selectedBackground &&
+          <h3>{`Opções de ${state.selectedBackground}`}</h3>
+        }
       </form>
     </Container>
   )
