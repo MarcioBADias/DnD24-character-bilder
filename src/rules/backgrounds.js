@@ -1,5 +1,6 @@
-export const backgrounds = {
-  Acolyte: {
+export const backgrounds = [
+  {
+    name: 'Acolyte',
     source: "PHB'24, page 178",
     abilityScores: ['Intelligence', 'Wisdom', 'Charisma'],
     feat: 'Magic Initiate (Cleric)',
@@ -23,7 +24,8 @@ export const backgrounds = {
       },
     ],
   },
-  Artisan: {
+  {
+    name: 'Artisan',
     source: "PHB'24, page 179",
     abilityScores: ['Strength', 'Dexterity', 'Intelligence'],
     feat: 'Crafter',
@@ -40,7 +42,8 @@ export const backgrounds = {
       },
     ],
   },
-  Charlatan: {
+  {
+    name: 'Charlatan',
     source: "PHB'24, page 180",
     abilityScores: ['Dexterity', 'Constitution', 'Charisma'],
     feat: 'Skilled',
@@ -57,7 +60,8 @@ export const backgrounds = {
       },
     ],
   },
-  Criminal: {
+  {
+    name: 'Criminal',
     source: "PHB'24, page 180",
     abilityScores: ['Dexterity', 'Constitution', 'Intelligence'],
     feat: 'Alert',
@@ -81,7 +85,8 @@ export const backgrounds = {
       },
     ],
   },
-  Entertainer: {
+  {
+    name: 'Entertainer',
     source: "PHB'24, page 180",
     abilityScores: ['Strength', 'Dexterity', 'Charisma'],
     feat: 'Musician',
@@ -105,7 +110,8 @@ export const backgrounds = {
       },
     ],
   },
-  Farmer: {
+  {
+    name: 'Farmer',
     source: "PHB'24, page 180",
     abilityScores: ['Strength', 'Constitution', 'Wisdom'],
     feat: 'Tough',
@@ -129,7 +135,8 @@ export const backgrounds = {
       },
     ],
   },
-  Guard: {
+  {
+    name: 'Guard',
     source: "PHB'24, page 181",
     abilityScores: ['Strength', 'Intelligence', 'Wisdom'],
     feat: 'Alert',
@@ -156,7 +163,8 @@ export const backgrounds = {
       },
     ],
   },
-  Guide: {
+  {
+    name: 'Guide',
     source: "PHB'24, page 181",
     abilityScores: ['Dexterity', 'Constitution', 'Wisdom'],
     feat: 'Magic Initiate (Druid)',
@@ -182,7 +190,8 @@ export const backgrounds = {
       },
     ],
   },
-  Hermit: {
+  {
+    name: 'Hermit',
     source: "PHB'24, page 182",
     abilityScores: ['Constitution', 'Wisdom', 'Charisma'],
     feat: 'Healer',
@@ -208,7 +217,8 @@ export const backgrounds = {
       },
     ],
   },
-  Merchant: {
+  {
+    name: 'Merchant',
     source: "PHB'24, page 182",
     abilityScores: ['Constitution', 'Intelligence', 'Charisma'],
     feat: 'Lucky',
@@ -230,7 +240,8 @@ export const backgrounds = {
       },
     ],
   },
-  Noble: {
+  {
+    name: 'Noble',
     source: "PHB'24, page 183",
     abilityScores: ['Strength', 'Intelligence', 'Charisma'],
     feat: 'Skilled',
@@ -247,7 +258,8 @@ export const backgrounds = {
       },
     ],
   },
-  Sage: {
+  {
+    name: 'Sage',
     source: "PHB'24, page 183",
     abilityScores: ['Constitution', 'Intelligence', 'Wisdom'],
     feat: 'Magic Initiate (Wizard)',
@@ -271,7 +283,8 @@ export const backgrounds = {
       },
     ],
   },
-  Sailor: {
+  {
+    name: 'Sailor',
     source: "PHB'24, page 184",
     abilityScores: ['Strength', 'Dexterity', 'Wisdom'],
     feat: 'Tavern Brawler',
@@ -294,7 +307,8 @@ export const backgrounds = {
       },
     ],
   },
-  Scribe: {
+  {
+    name: 'Scribe',
     source: "PHB'24, page 184",
     abilityScores: ['Dexterity', 'Intelligence', 'Wisdom'],
     feat: 'Skilled',
@@ -318,7 +332,8 @@ export const backgrounds = {
       },
     ],
   },
-  Soldier: {
+  {
+    name: 'Soldier',
     source: "PHB'24, page 185",
     abilityScores: ['Strength', 'Dexterity', 'Constitution'],
     feat: 'Savage Attacker',
@@ -344,7 +359,8 @@ export const backgrounds = {
       },
     ],
   },
-  Wayfarer: {
+  {
+    name: 'Wayfarer',
     source: "PHB'24, page 185",
     abilityScores: ['Dexterity', 'Wisdom', 'Charisma'],
     feat: 'Lucky',
@@ -368,5 +384,5 @@ export const backgrounds = {
         items: ['50 GP'],
       },
     ],
-  },
-}
+  }
+]

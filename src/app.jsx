@@ -1,3 +1,4 @@
+import { CreateCharacter } from './components/CharacterForm'
 import { CharacterSheet } from './components/CharacterSheet'
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
         marginTop: 50,
       }}
     >
-      <CharacterSheet />
+      <CreateCharacter/>
     </div>
   )
 }
