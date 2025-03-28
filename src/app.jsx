@@ -12,6 +12,7 @@ const App = () => {
       }}
     >
       <CreateCharacter/>
+      <CharacterSheet/>
     </div>
   )
 }

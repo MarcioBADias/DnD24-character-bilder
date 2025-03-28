@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react'
 import { Container } from '../CharacterSheet/style'
 import { backgrounds } from '../../rules/backgrounds'
+import { CharSelectOptions } from '../CharSelectOptions'
 
 const reduce = (state, action) => {
   if (action.type === 'set_background') {
@@ -70,21 +71,15 @@ const CreateCharacter = () => {
         <label>
           Selecione sua <span>Origem</span> / Antecedentes
         </label>
-        <select
-          name="background"
-          id="background"
-          value={state.selectedBackground}
-          onChange={(e) =>
-            dispatch({ type: 'set_background', payload: e.target.value })
-          }
-        >
-          <option value="">Selecione sua origem</option>
-          {backgrounds.map((background) => (
-            <option key={background.name} value={background.name}>
-              {background.name}
-            </option>
-          ))}
-        </select>
+
+        <CharSelectOptions
+          name = "background"
+          selectState = {state.selectedBackground}
+          doc = {backgrounds}
+          optItem = "name"
+          inChange={ (e) =>
+            dispatch({ type: 'set_background', payload: e.target.value }) }
+        />
 
         {state.selectedBackground && (
           <div>
@@ -93,43 +88,24 @@ const CreateCharacter = () => {
               <span style={{ color: 'gold' }}>{state.selectedBackground}</span>
             </h3>
             <label>Selecione seus bônus de atributos por origem:</label>
-            <select
-              name="backgroundAtt"
-              id="backgroundAtt"
-              value={state.selectedAbilityBonus}
-              onChange={(e) =>
-                dispatch({ type: 'set_ability_bonus', payload: e.target.value })
-              }
-            >
-              <option value="">Selecione seus pontos</option>
-              {abilityOptions.map((option, index) => (
-                <option key={index} value={option}>
-                  {option}
-                </option>
-              ))}
-            </select>
-
+            <CharSelectOptions
+          name = "backgroundAtt"
+          selectState = {state.selectedAbilityBonus}
+          doc = {abilityOptions}
+          optItem = {null}
+          inChange={ (e) =>
+            dispatch({ type: 'set_ability_bonus', payload: e.target.value }) }
+        />
             <label>Selecione seu equipamento:</label>
-            <select
-              name="backgroundEquipOption"
-              id="backgroundEquipOption"
-              value={state.selectedEquipmentOption}
-              onChange={(e) =>
-                dispatch({
-                  type: 'set_equipment_option',
-                  payload: e.target.value,
-                })
-              }
-            >
-              <option value="">Selecione uma opção</option>
-              {equipmentOptions.map((eq) => (
-                <option key={eq.option} value={eq.option}>
-                  Opção {eq.option}
-                </option>
-              ))}
-            </select>
-
-            {state.selectedEquipmentOption && (
+            <CharSelectOptions
+          name = "backgroundEquipOption"
+          selectState = {state.selectedEquipmentOption}
+          doc = {equipmentOptions}
+          optItem = "option"
+          inChange={ (e) =>
+            dispatch({ type: 'set_equipment_option', payload: e.target.value }) }
+        />
+        {state.selectedEquipmentOption && (
               <p>
                 <strong>Seu equipamento é:</strong>{' '}
                 {selectedEquipmentDescription}
