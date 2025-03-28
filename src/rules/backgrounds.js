@@ -384,5 +384,5 @@ export const backgrounds = [
         items: ['50 GP'],
       },
     ],
-  }
+  },
 ]
