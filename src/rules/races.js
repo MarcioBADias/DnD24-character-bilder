@@ -1,5 +1,6 @@
-export const races = {
-  Aasimar: {
+export const races = [
+  { 
+    name: 'Aasimar',
     source: "PHB'24, p186",
     creatureType: 'Humanoid',
     size: 'Medium (about 4-7 feet tall) or Small (about 2-4 feet tall), chosen when you select this species',
@@ -12,7 +13,8 @@ export const races = {
       'Celestial Revelation: Transformation at level 3; choose one of three options: Heavenly Wings, Inner Radiance, or Necrotic Shroud.',
     ],
   },
-  Dragonborn: {
+  { 
+    name: 'Dragonborn',
     source: "PHB'24, p187",
     creatureType: 'Humanoid',
     size: 'Medium (about 5-7 feet tall)',
@@ -25,7 +27,8 @@ export const races = {
       'Draconic Flight: At level 5, use Bonus Action to sprout spectral wings for flight for 10 minutes.',
     ],
   },
-  Dwarf: {
+  { 
+    name: 'Dwarf',
     source: "PHB'24, p188",
     creatureType: 'Humanoid',
     size: 'Medium (about 4-5 feet tall)',
@@ -37,7 +40,8 @@ export const races = {
       'Stonecunning: Gain Tremorsense for 10 minutes as a Bonus Action when on stone surfaces.',
     ],
   },
-  Elf: {
+  { 
+    name: 'Elf',
     source: "PHB'24, p189",
     creatureType: 'Humanoid',
     size: 'Medium (about 5-6 feet tall)',
@@ -50,7 +54,8 @@ export const races = {
       'Trance: No need to sleep; you can complete a Long Rest in 4 hours of meditation.',
     ],
   },
-  Gnome: {
+  { 
+    name: 'Gnome',
     source: "PHB'24, p191",
     creatureType: 'Humanoid',
     size: 'Small (about 3-4 feet tall)',
@@ -61,7 +66,8 @@ export const races = {
       'Gnomish Lineage: Choose between Forest Gnome or Rock Gnome with specific abilities and spellcasting traits.',
     ],
   },
-  Goliath: {
+  { 
+    name: 'Goliath',
     source: "PHB'24, p192",
     creatureType: 'Humanoid',
     size: 'Medium (about 7-8 feet tall)',
@@ -72,7 +78,8 @@ export const races = {
       'Powerful Build: Advantage on Grappling checks and count as one size larger for carrying capacity.',
     ],
   },
-  Halfling: {
+  { 
+    name: 'Halfling',
     source: "PHB'24, p193",
     creatureType: 'Humanoid',
     size: 'Small (about 2-3 feet tall)',
@@ -84,7 +91,8 @@ export const races = {
       'Naturally Stealthy: Take the Hide action even when only obscured by a creature at least one size larger than you.',
     ],
   },
-  Human: {
+  { 
+    name: 'Human',
     source: "PHB'24, p194",
     creatureType: 'Humanoid',
     size: 'Medium (about 4-7 feet tall) or Small (about 2-4 feet tall), chosen when you select this species',
@@ -95,7 +103,8 @@ export const races = {
       'Versatile: Gain an Origin feat of your choice.',
     ],
   },
-  Orc: {
+  { 
+    name: 'Orc',
     source: "PHB'24, p195",
     creatureType: 'Humanoid',
     size: 'Medium (about 6-7 feet tall)',
@@ -106,7 +115,8 @@ export const races = {
       'Relentless Endurance: Drop to 1 HP instead of 0 once per Long Rest.',
     ],
   },
-  Tiefling: {
+  { 
+    name: 'Tiefling',
     source: "PHB'24, p197",
     creatureType: 'Humanoid',
     size: 'Medium (about 4-7 feet tall) or Small (about 3-4 feet tall), chosen when you select this species',
@@ -117,4 +127,4 @@ export const races = {
       'Otherworldly Presence: You know the Thaumaturgy cantrip.',
     ],
   },
-}
+]

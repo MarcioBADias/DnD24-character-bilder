@@ -2,6 +2,7 @@ import React, { useReducer } from 'react'
 import { Container } from '../CharacterSheet/style'
 import { backgrounds } from '../../rules/backgrounds'
 import { CharSelectOptions } from '../CharSelectOptions'
+import { races } from '../../rules/races'
 
 const reduce = (state, action) => {
   if (action.type === 'set_background') {
@@ -22,6 +23,12 @@ const reduce = (state, action) => {
       selectedEquipment: '',
     }
   }
+  if (action.type === 'set_race') {
+    return {
+      ...state,
+      selectRace: action.payload
+    }
+  }
   return state
 }
 
@@ -30,6 +37,7 @@ const initialState = {
   selectedAbilityBonus: '',
   selectedEquipmentOption: '',
   selectedEquipment: '',
+  selectRace: '',
 }
 
 const generateAbilityOptions = (abilityScores) => {
@@ -64,6 +72,8 @@ const CreateCharacter = () => {
   const selectedEquipmentDescription = equipmentOptions
     .find((eq) => eq.option === state.selectedEquipmentOption)
     ?.items.join(', ')
+
+  const selectedRaceTraits = state.selectRace.traits
 
   return (
     <Container>
@@ -113,6 +123,25 @@ const CreateCharacter = () => {
             )}
           </div>
         )}
+        <div>
+          <label>Selecione sua Raça/Espécie:</label>
+          <CharSelectOptions
+          name = "race"
+          selectState = {state.selectRace}
+          doc = {races}
+          optItem = "name"
+          inChange={ (e) =>
+            dispatch({ type: 'set_race', payload: e.target.value }) }
+        />
+        </div>
+        {state.selectRace && (
+              <p>
+                <strong>Traços Raciais:</strong>{' '}
+                {selectedRaceTraits?.map(trait => (
+                  <span>{trait}</span>
+                ))}
+              </p>
+            )}
       </form>
     </Container>
   )
