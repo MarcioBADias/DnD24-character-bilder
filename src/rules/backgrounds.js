@@ -8,7 +8,7 @@ export const backgrounds = [
     toolProficiency: "Calligrapher's Supplies",
     equipment: [
       {
-        option: 'A',
+        option: 'Kit inicial',
         items: [
           "Calligrapher's Supplies",
           'Book (prayers)',
@@ -19,7 +19,7 @@ export const backgrounds = [
         ],
       },
       {
-        option: 'B',
+        option: 'Valor para comprar tudo',
         items: ['50 GP'],
       },
     ],
@@ -33,11 +33,11 @@ export const backgrounds = [
     toolProficiency: "Choose one kind of Artisan's Tools",
     equipment: [
       {
-        option: 'A',
+        option: 'Kit inicial',
         items: ["Artisan's Tools", '2 Pouches', "Traveler's Clothes", '32 GP'],
       },
       {
-        option: 'B',
+        option: 'Valor para comprar tudo',
         items: ['50 GP'],
       },
     ],
@@ -51,11 +51,11 @@ export const backgrounds = [
     toolProficiency: 'Forgery Kit',
     equipment: [
       {
-        option: 'A',
+        option: 'Kit inicial',
         items: ['Forgery Kit', 'Costume', 'Fine Clothes', '15 GP'],
       },
       {
-        option: 'B',
+        option: 'Valor para comprar tudo',
         items: ['50 GP'],
       },
     ],
@@ -69,7 +69,7 @@ export const backgrounds = [
     toolProficiency: "Thieves' Tools",
     equipment: [
       {
-        option: 'A',
+        option: 'Kit inicial',
         items: [
           '2 Daggers',
           "Thieves' Tools",
@@ -80,7 +80,7 @@ export const backgrounds = [
         ],
       },
       {
-        option: 'B',
+        option: 'Valor para comprar tudo',
         items: ['50 GP'],
       },
     ],
@@ -94,7 +94,7 @@ export const backgrounds = [
     toolProficiency: 'Choose one kind of Musical Instrument',
     equipment: [
       {
-        option: 'A',
+        option: 'Kit inicial',
         items: [
           'Musical Instrument',
           '2 Costumes',
@@ -105,7 +105,7 @@ export const backgrounds = [
         ],
       },
       {
-        option: 'B',
+        option: 'Valor para comprar tudo',
         items: ['50 GP'],
       },
     ],
@@ -119,7 +119,7 @@ export const backgrounds = [
     toolProficiency: "Carpenter's Tools",
     equipment: [
       {
-        option: 'A',
+        option: 'Kit inicial',
         items: [
           'Sickle',
           "Carpenter's Tools",
@@ -130,7 +130,7 @@ export const backgrounds = [
         ],
       },
       {
-        option: 'B',
+        option: 'Valor para comprar tudo',
         items: ['50 GP'],
       },
     ],
@@ -144,7 +144,7 @@ export const backgrounds = [
     toolProficiency: 'Choose one kind of Gaming Set',
     equipment: [
       {
-        option: 'A',
+        option: 'Kit inicial',
         items: [
           'Spear',
           'Light Crossbow',
@@ -158,7 +158,7 @@ export const backgrounds = [
         ],
       },
       {
-        option: 'B',
+        option: 'Valor para comprar tudo',
         items: ['50 GP'],
       },
     ],
@@ -172,7 +172,7 @@ export const backgrounds = [
     toolProficiency: "Cartographer's Tools",
     equipment: [
       {
-        option: 'A',
+        option: 'Kit inicial',
         items: [
           'Shortbow',
           '20 Arrows',
@@ -185,7 +185,7 @@ export const backgrounds = [
         ],
       },
       {
-        option: 'B',
+        option: 'Valor para comprar tudo',
         items: ['50 GP'],
       },
     ],
@@ -199,7 +199,7 @@ export const backgrounds = [
     toolProficiency: 'Herbalism Kit',
     equipment: [
       {
-        option: 'A',
+        option: 'Kit inicial',
         items: [
           'Quarterstaff',
           'Herbalism Kit',
@@ -212,7 +212,7 @@ export const backgrounds = [
         ],
       },
       {
-        option: 'B',
+        option: 'Valor para comprar tudo',
         items: ['50 GP'],
       },
     ],
@@ -226,7 +226,7 @@ export const backgrounds = [
     toolProficiency: "Navigator's Tools",
     equipment: [
       {
-        option: 'A',
+        option: 'Kit inicial',
         items: [
           "Navigator's Tools",
           '2 Pouches',
@@ -235,7 +235,7 @@ export const backgrounds = [
         ],
       },
       {
-        option: 'B',
+        option: 'Valor para comprar tudo',
         items: ['50 GP'],
       },
     ],
@@ -249,11 +249,11 @@ export const backgrounds = [
     toolProficiency: 'Choose one kind of Gaming Set',
     equipment: [
       {
-        option: 'A',
+        option: 'Kit inicial',
         items: ['Gaming Set', 'Fine Clothes', 'Perfume', '29 GP'],
       },
       {
-        option: 'B',
+        option: 'Valor para comprar tudo',
         items: ['50 GP'],
       },
     ],
@@ -267,7 +267,7 @@ export const backgrounds = [
     toolProficiency: "Calligrapher's Supplies",
     equipment: [
       {
-        option: 'A',
+        option: 'Kit inicial',
         items: [
           'Quarterstaff',
           "Calligrapher's Supplies",
@@ -278,7 +278,7 @@ export const backgrounds = [
         ],
       },
       {
-        option: 'B',
+        option: 'Valor para comprar tudo',
         items: ['50 GP'],
       },
     ],
@@ -292,7 +292,7 @@ export const backgrounds = [
     toolProficiency: "Navigator's Tools",
     equipment: [
       {
-        option: 'A',
+        option: 'Kit inicial',
         items: [
           'Dagger',
           "Navigator's Tools",
@@ -302,7 +302,7 @@ export const backgrounds = [
         ],
       },
       {
-        option: 'B',
+        option: 'Valor para comprar tudo',
         items: ['50 GP'],
       },
     ],
@@ -316,7 +316,7 @@ export const backgrounds = [
     toolProficiency: "Calligrapher's Supplies",
     equipment: [
       {
-        option: 'A',
+        option: 'Kit inicial',
         items: [
           "Calligrapher's Supplies",
           'Fine Clothes',
@@ -327,7 +327,7 @@ export const backgrounds = [
         ],
       },
       {
-        option: 'B',
+        option: 'Valor para comprar tudo',
         items: ['50 GP'],
       },
     ],
@@ -341,7 +341,7 @@ export const backgrounds = [
     toolProficiency: 'Choose one kind of Gaming Set',
     equipment: [
       {
-        option: 'A',
+        option: 'Kit inicial',
         items: [
           'Spear',
           'Shortbow',
@@ -354,7 +354,7 @@ export const backgrounds = [
         ],
       },
       {
-        option: 'B',
+        option: 'Valor para comprar tudo',
         items: ['50 GP'],
       },
     ],
@@ -368,7 +368,7 @@ export const backgrounds = [
     toolProficiency: "Thieves' Tools",
     equipment: [
       {
-        option: 'A',
+        option: 'Kit inicial',
         items: [
           '2 Daggers',
           "Thieves' Tools",
@@ -380,7 +380,7 @@ export const backgrounds = [
         ],
       },
       {
-        option: 'B',
+        option: 'Valor para comprar tudo',
         items: ['50 GP'],
       },
     ],

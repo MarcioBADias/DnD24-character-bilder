@@ -96,7 +96,7 @@ const CreateCharacter = () => {
           inChange={ (e) =>
             dispatch({ type: 'set_ability_bonus', payload: e.target.value }) }
         />
-            <label>Selecione seu equipamento:</label>
+            <label>Selecione uma opção de equipamentos:</label>
             <CharSelectOptions
           name = "backgroundEquipOption"
           selectState = {state.selectedEquipmentOption}
